@@ -1,6 +1,8 @@
 pipeline 
 {
   agent any 
+  stages 
+  {
       stage ('Source Composition Analysis') 
         {
       steps {
@@ -11,4 +13,5 @@ pipeline
          sh 'cat /var/lib/jenkins/OWASP-Dependency-Check/reports/dependency-check-report.xml'
             }
       }
+  }
 }
